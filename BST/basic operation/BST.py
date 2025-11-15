@@ -68,6 +68,7 @@ class BST:
                 node.right = delete2(node.right,min_node.val)
 
             return node
+        delete2(self.root,val)
 
     def find_min(self,node):
         while node.left:
