@@ -42,6 +42,8 @@ class BST:
                 node.left = insert2(node.left,val)
             elif val > node.val:
                 node.right = insert2(node.right,val)
+            return node
+        insert2(self.root,val)
 
     def delete(self,val):
         def delete2(node,val):
