@@ -12,8 +12,8 @@ def countNumbers(n):
         """
         :param pos: 当前处理到第几位(从高位到低位，0-indexed)
         :param state: 题目相关的状态
-        :param is_limit: 当前位是否n的约束
-        :param is_num: 是否已经填写了数字
+        :param is_limit: 当前位是否n的约束：True:前面的数字都是上界对应的数字，当前最高就是上界位 。False：前面的比上界小，该位置可以填0-9
+        :param is_num: 是否已经填写了数字:True：前面已经填了数字，当前位可以填0-9 False:前面都是前导0，该位置跳过
         """
         if pos == len(s):
             return 1 if is_num else 0
